@@ -10,7 +10,7 @@ cask "miito" do
 
   # Apple Silicon only for now, and the app targets Sonoma APIs.
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Miito.app"
 
