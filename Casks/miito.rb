@@ -1,6 +1,6 @@
 cask "miito" do
-  version "0.1.1"
-  sha256 "0e66dec93bbcf51ff756e3732e6053b2e842278186c74d3c1bb7dc31fb84fa34"
+  version "0.1.2"
+  sha256 "f66ca931196f018882debf60d50023d302e0aaed74cc4c311a962b1bd52b5953"
 
   url "https://github.com/CypressAI/miito-releases/releases/download/v#{version}/Miito-#{version}-arm64.dmg",
       verified: "github.com/CypressAI/miito-releases/"
@@ -23,15 +23,16 @@ cask "miito" do
   ]
 
   caveats <<~EOS
-    Miito is ad-hoc signed and not yet notarised, so Gatekeeper will block the
-    first launch. Homebrew quarantines casks by default, so either:
+    Miito is ad-hoc signed and not yet notarised, so Gatekeeper blocks the first
+    launch. Clear the quarantine flag once, and it will open normally after that:
 
       xattr -dr com.apple.quarantine /Applications/Miito.app
 
-    or reinstall without the quarantine flag:
+    Notarised builds will not need this at all.
 
-      brew reinstall --cask --no-quarantine cypressai/tap/miito
+    This build points at https://dev.cypressai.co. To point it somewhere else,
+    create ~/Library/Application Support/miito-desktop/config.json:
 
-    You only need to do this once. Notarised builds will not need it at all.
+      {"workspaceUrl": "https://app.cypressai.co"}
   EOS
 end
