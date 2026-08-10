@@ -1,6 +1,6 @@
 cask "miito" do
-  version "0.1.3"
-  sha256 "d9b8a6285d5f2225235965396e8d1f37fe136c78c645cb17f96c048615376d94"
+  version "0.1.4"
+  sha256 "048999c807e85c33243997dd98c37392c6c5f042726c5b713f230f959b3fdd78"
 
   url "https://github.com/CypressAI/miito-releases/releases/download/v#{version}/Miito-#{version}-arm64.dmg",
       verified: "github.com/CypressAI/miito-releases/"
@@ -30,9 +30,9 @@ cask "miito" do
 
     Notarised builds will not need this at all.
 
-    This build points at https://dev.cypressai.co. To point it somewhere else,
+    This build points at https://app.cypressai.co. To point it somewhere else,
     create ~/Library/Application Support/miito-desktop/config.json:
 
-      {"workspaceUrl": "https://app.cypressai.co"}
+      {"workspaceUrl": "https://dev.cypressai.co"}
   EOS
 end
