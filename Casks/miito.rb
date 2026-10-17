@@ -1,6 +1,6 @@
 cask "miito" do
-  version "0.1.28"
-  sha256 "3ee14da7c5a595ec5e1fbfbdb44ca2e9fc32912d954f06239772dd925f3901ef"
+  version "0.1.29"
+  sha256 "e2095a404f6ad06ac3c297612205f24e886d0c1a8a489688ac5bef6a4be8dd76"
 
   url "https://github.com/CypressAI/miito-releases/releases/download/v#{version}/Miito-#{version}-arm64.dmg",
       verified: "github.com/CypressAI/miito-releases/"
@@ -11,6 +11,8 @@ cask "miito" do
   # Apple Silicon only for now, and the app targets Sonoma APIs.
   depends_on arch: :arm64
   depends_on macos: :sonoma
+
+  auto_updates true
 
   app "Miito.app"
 
