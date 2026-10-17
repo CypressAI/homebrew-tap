@@ -1,6 +1,6 @@
 cask "miito" do
-  version "0.1.29"
-  sha256 "e2095a404f6ad06ac3c297612205f24e886d0c1a8a489688ac5bef6a4be8dd76"
+  version "0.1.30"
+  sha256 "3112546678d1194ea0aa8bad32285f58b5b6047f1b3c63137b479e19b8c8347d"
 
   url "https://github.com/CypressAI/miito-releases/releases/download/v#{version}/Miito-#{version}-arm64.dmg",
       verified: "github.com/CypressAI/miito-releases/"
