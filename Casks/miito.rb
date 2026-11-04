@@ -23,20 +23,4 @@ cask "miito" do
     "~/Library/Preferences/co.cypressai.miito.plist",
     "~/Library/Saved Application State/co.cypressai.miito.savedState",
   ]
-
-  caveats <<~EOS
-    Miito is ad-hoc signed and not yet notarised, so Gatekeeper blocks the first
-    launch. Clear the quarantine flag once, and it will open normally after that:
-
-      xattr -dr com.apple.quarantine /Applications/Miito.app
-
-    Notarised builds will not need this at all.
-
-    Sign in with email and password — Microsoft sign-in 403s on dev right now.
-
-    This build points at https://dev.cypressai.co. To point it somewhere else,
-    create ~/Library/Application Support/miito-desktop/config.json:
-
-      {"workspaceUrl": "https://app.cypressai.co"}
-  EOS
 end
