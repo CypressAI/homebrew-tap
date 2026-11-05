@@ -1,15 +1,17 @@
 cask "miito" do
-  version "0.1.41"
-  sha256 "710bd9c70fa91bd878a404030d056f88f69be78767a95c876a0b959244d5bbeb"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/CypressAI/miito-releases/releases/download/v#{version}/Miito-#{version}-arm64.dmg",
+  version "0.1.42"
+  sha256 arm:   "930b67ee9cf445b46b8e0923d61b74c89f5e2d641fa09ad71ed21a2f7d31bfe0",
+         intel: "85fd7968bc4d86f33085bc5c5e1694cb9ceac573c111f720b4ba195f6585ccd4"
+
+  url "https://github.com/CypressAI/miito-releases/releases/download/v#{version}/Miito-#{version}-#{arch}.dmg",
       verified: "github.com/CypressAI/miito-releases/"
   name "Miito"
   desc "Terminals, a browser, and coding agents in one window"
   homepage "https://cypressai.co/desktop"
 
-  # Apple Silicon only for now, and the app targets Sonoma APIs.
-  depends_on arch: :arm64
+  # The app targets Sonoma APIs.
   depends_on macos: :sonoma
 
   auto_updates true
