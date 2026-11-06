@@ -1,9 +1,9 @@
 cask "miito" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.42"
-  sha256 arm:   "930b67ee9cf445b46b8e0923d61b74c89f5e2d641fa09ad71ed21a2f7d31bfe0",
-         intel: "85fd7968bc4d86f33085bc5c5e1694cb9ceac573c111f720b4ba195f6585ccd4"
+  version "0.1.43"
+  sha256 arm:   "f96db58e3aeca968728afbe249bb827d8262eb03cab14575d16366a2080435af",
+         intel: "483c080815ce3e1e500dd1a95cc8119cb42ef220af0793d808ca5061969cce20"
 
   url "https://github.com/CypressAI/miito-releases/releases/download/v#{version}/Miito-#{version}-#{arch}.dmg",
       verified: "github.com/CypressAI/miito-releases/"
